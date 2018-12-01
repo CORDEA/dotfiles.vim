@@ -62,3 +62,17 @@ colorscheme 1989
 
 nnoremap j gj
 nnoremap k gk
+
+augroup vimrc
+  autocmd!
+augroup END
+
+function! s:template_keywords()
+  silent! %s/<+DATE+>/\=strftime('%Y-%m-%d')/g
+endfunction
+
+autocmd vimrc User plugin-template-loaded call s:template_keywords()
+autocmd vimrc User plugin-template-loaded
+    \   if search('<+CURSOR+>')
+    \ |   silent! execute 'normal! "_da>'
+    \ | endif
