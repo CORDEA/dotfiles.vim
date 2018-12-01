@@ -71,6 +71,10 @@ let g:lightline = {
             \ 'colorscheme': 'wombat',
             \ }
 
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+
 augroup vimrc
     autocmd!
 augroup END
