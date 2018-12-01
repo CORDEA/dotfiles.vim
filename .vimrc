@@ -67,6 +67,10 @@ let NERDSpaceDelims = 1
 nmap <C-T> <Plug>NERDCommenterToggle
 vmap <C-T> <Plug>NERDCommenterToggle
 
+let g:lightline = {
+            \ 'colorscheme': 'wombat',
+            \ }
+
 augroup vimrc
   autocmd!
 augroup END
@@ -77,6 +81,6 @@ endfunction
 
 autocmd vimrc User plugin-template-loaded call s:template_keywords()
 autocmd vimrc User plugin-template-loaded
-    \   if search('<+CURSOR+>')
-    \ |   silent! execute 'normal! "_da>'
-    \ | endif
+            \   if search('<+CURSOR+>')
+            \ |   silent! execute 'normal! "_da>'
+            \ | endif
