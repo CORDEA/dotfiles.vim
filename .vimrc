@@ -39,21 +39,21 @@ set colorcolumn=120
 set novisualbell
 
 if &compatible
-  set nocompatible
+    set nocompatible
 endif
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state('~/.vim/dein')
-  call dein#begin(expand('~/.vim/dein'))
+    call dein#begin(expand('~/.vim/dein'))
 
-  let s:toml      = '~/.vim/rc/dein.toml'
-  let s:lazy_toml = '~/.vim/rc/deinlazy.toml'
+    let s:toml      = '~/.vim/rc/dein.toml'
+    let s:lazy_toml = '~/.vim/rc/deinlazy.toml'
 
-  call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+    call dein#load_toml(s:toml, {'lazy': 0})
+    call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-  call dein#end()
-  call dein#save_state()
+    call dein#end()
+    call dein#save_state()
 endif
 
 filetype plugin indent on
@@ -72,11 +72,11 @@ let g:lightline = {
             \ }
 
 augroup vimrc
-  autocmd!
+    autocmd!
 augroup END
 
 function! s:template_keywords()
-  silent! %s/<+DATE+>/\=strftime('%Y-%m-%d')/g
+    silent! %s/<+DATE+>/\=strftime('%Y-%m-%d')/g
 endfunction
 
 autocmd vimrc User plugin-template-loaded call s:template_keywords()
