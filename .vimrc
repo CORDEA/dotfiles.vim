@@ -63,6 +63,10 @@ colorscheme 1989
 nnoremap j gj
 nnoremap k gk
 
+let NERDSpaceDelims = 1
+nmap <C-T> <Plug>NERDCommenterToggle
+vmap <C-T> <Plug>NERDCommenterToggle
+
 augroup vimrc
   autocmd!
 augroup END
