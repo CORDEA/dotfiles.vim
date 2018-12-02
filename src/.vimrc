@@ -41,7 +41,7 @@ set novisualbell
 if &compatible
     set nocompatible
 endif
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state('~/.vim/dein')
     call dein#begin(expand('~/.vim/dein'))
